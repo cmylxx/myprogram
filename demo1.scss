@@ -1,0 +1,141 @@
+@charset "utf-8";
+*{
+    margin:0;
+    padding:0;
+}
+ul,dl{
+    list-style:none;
+} 
+a{
+    text-decoration: none;
+}
+#head{
+    width:1280px;
+    height:32px;
+    background:#f7f7f7;
+    position:relative;
+}
+#headul{
+    position:absolute;
+    right:40px;
+}
+#headul li{
+    float:left;
+    margin-left:10px;
+    font-size:12px;
+    line-height:14px;
+    color:gray;
+    margin-top:10px;
+}
+#head li img{
+    margin-top:5px;
+}
+#head li:nth-child(2){
+    border-right:1px solid gray;
+    padding-right:10px;
+}
+#top{
+    height:166px;
+    width:1280px;
+    position:relative;
+    background:url(../images/log.jpg) no-repeat 40px 90px;
+}
+#search{
+    position: absolute;
+    right:40px;
+    top:30px;
+}
+#txt{
+    width:260px;
+    height:28px;
+    float:left;
+}
+#btn{
+    width:50px;
+    height:30px;
+    background:#b71a21;
+    border:none;
+    float:left;
+    margin-right:24px;
+    margin-top:1px;
+    color:#fff;
+}
+#goods{
+    display:inline-block;
+    background:#b71a21;
+    
+    width:105px;
+    height:30px;
+    line-height:30px;
+    font-size:14px;
+   
+}
+#goods a{
+    display:inline-block;
+    color:#fff;
+    background:url(../images/gc.jpg) no-repeat 0 center;
+}
+#goods em{
+     font-style:normal;
+}
+#goods span{
+    margin-left:30px;
+}
+ .rs{
+     position:absolute;
+     right:40px;
+     top:66px;
+ }  
+.rs li{
+    float:left;
+    margin-left:10px;
+    font-size:12px;
+    color:gray;
+    a{
+        color:gray;
+    }
+}
+.nav{
+    position:absolute;
+    left:260px;
+    top:118px;
+}
+.nav li{
+    width:96px;
+    height:16px;
+    position: relative;
+    float:left;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.nav span{
+    position:absolute;
+    right:0px;
+    width:1px;
+    height:16px;
+    border-right:1px solid gray;
+    
+}
+.nav  li:last-child{
+    border:none;
+}
+.nav li a{
+    text-align: center;
+      color:gray;
+}
+.hashover:hover{
+   padding-bottom: 5px;
+    border-bottom:5px solid #b71a21;
+}
+.nav li a:hover{
+     color:#b71a21;
+}
+#banner{
+    width:1280px;
+    height:535px;
+    
+}
+#banner img{
+    width:1280px;
+    height:535px;
+}
