@@ -127,10 +127,7 @@ a {
 
 #banner {
   width: 1280px;
-  height: 535px; }
-
-#banner img {
-  width: 1280px;
-  height: 535px; }
+  height: 535px;
+  position: relative; }
 
 /*# sourceMappingURL=demo1.css.map */
