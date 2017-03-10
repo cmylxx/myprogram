@@ -1,4 +1,5 @@
-			function getId(str){
+		//轮播图
+		function getId(str){
 				return document.getElementById(str)
 			}
 			function getStyle(obj,attr){
@@ -11,6 +12,7 @@
 			var side = getId("side");
 			var banner = getId("banner");
 			var oLi = side.getElementsByTagName("li");
+			
 			var prev = getId("prev");
 			var next = getId("next");
 			var oList = getId("list");
@@ -108,3 +110,24 @@
 					
 				}
 			}
+			//返回顶部
+			
+			returnTop.onclick=function(){
+				var scroll=document.body.scrollTop||document.documentElement.scrollTop;
+				scroll=0;
+				document.body.scrollTop=scroll;
+			}
+			//二级导航
+			
+				var navbar = document.getElementsByClassName("nav")[0];
+				var hashover = navbar.getElementsByClassName("hashover");
+				for(var i=0;i<hashover.length;i++){
+					hashover[i].onmouseover = function(){
+						this.getElementsByTagName("ul")[0].style.display = "block";
+						
+					}
+					hashover[i].onmouseout = function(){
+					this.getElementsByTagName("ul")[0].style.display = "none";
+						}
+				}
+			
