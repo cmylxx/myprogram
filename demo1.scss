@@ -867,3 +867,36 @@ a{
     cursor: pointer;
    
 }
+
+//第一个子网页
+#subnav{
+    width:1200px;
+    height:50px;
+    background:#fbfbfb;
+    margin-left:40px;
+    margin-top:40px;
+     border-bottom:1px solid gray;
+      border-top:1px solid gray;
+}
+#sublist{
+   
+   width:1200px;
+    height:50px;
+    background:#fbfbfb;
+}
+#sublist li{
+    height:50px;
+    float:left;
+    font-size:14px;
+    font-weight:bold;
+    line-height:50px;
+    margin-right:95px;
+    
+    
+}
+#sublist li:first-child{
+    margin-left:20px;
+}
+#sublist li a{
+    color:gray;
+}

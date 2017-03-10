@@ -1,4 +1,4 @@
-		//轮播图
+//轮播图
 		function getId(str){
 				return document.getElementById(str)
 			}
@@ -15,9 +15,7 @@
 			
 			var prev = getId("prev");
 			var next = getId("next");
-			var oList = getId("list");
 			
-			var _Li = oList.getElementsByTagName("li");
 			var timer=null;
 			var m = 0;
 			var oLen = oLi.length;
@@ -43,10 +41,7 @@
 					oLi[m].style.display = "block";
 					oLi[m].getElementsByTagName("img")[0].style.opacity = 0;
 					move(oLi[m].getElementsByTagName("img")[0],{"opacity":"1"});
-					for(var i=0;i<oLen;i++){
-						_Li[i].className = "";
-					}
-					_Li[m].className = "active";
+					
 				},2500)
 			}
 			autoPlay();
@@ -64,10 +59,7 @@
 				oLi[m].style.display = "block";
 				oLi[m].getElementsByTagName("img")[0].style.opacity = 0;
 				move(oLi[m].getElementsByTagName("img")[0],{"opacity":"1"});
-				for(var i=0;i<oLen;i++){
-					_Li[i].className = "";
-				}
-				_Li[m].className = "active";
+				
 			}
 			// prev
 			prev.onclick = function(){
@@ -82,10 +74,7 @@
 				oLi[m].style.display = "block";
 				oLi[m].getElementsByTagName("img")[0].style.opacity = 0;
 				move(oLi[m].getElementsByTagName("img")[0],{"opacity":"1"});
-				for(var i=0;i<oLen;i++){
-					_Li[i].className = "";
-				}
-				_Li[m].className = "active";
+				
 			}
 			//鼠标事件
 			banner.onmouseover = function(){
@@ -95,22 +84,7 @@
 				autoPlay();
 			}
 			
-			//
-			for(var i=0;i<oLen;i++){
-				_Li[i].index = i;
-				_Li[i].onmouseover = function(){
-					for(var j=0;j<oLen;j++){
-						_Li[j].className = "";
-						oLi[j].style.display = "none";
-					}
-					this.className = "active";
-					m = this.index;
-					oLi[m].style.display = "block";
-					oLi[m].getElementsByTagName("img")[0].style.opacity = 0;
-					move(oLi[m].getElementsByTagName("img")[0],{"opacity":"1"});
-					
-				}
-			}
+			
 			//返回顶部
 			
 			returnTop.onclick=function(){
