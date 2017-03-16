@@ -35,3 +35,55 @@
 			 sjs.innerHTML=res;
 			}
 			
+		
+			$(function(){
+			$(".infont").click(function(){
+					$.post("checkUser.php",{"user":$("#uname").val()},
+					
+					function(data){
+						console.log(data);
+						if($("#uname").val()==""){
+							$(".p1").html("请填写用户名")
+							$(".p1").css({color:"red"})
+						}else{
+							if(data.indexOf("1")>-1){
+								$(".p1").html("用户名正确");
+								$(".p1").css({color:"green"})							
+								$("#upwd").attr("disabled",false)
+								$.post(
+									 'check.php',{"pwd":$("#upwd").val(),"user":$("#uname").val()},			 
+									function(data){
+									console.log(data);
+									if($("#upwd").val()==""){
+									$(".p2").html("请填写密码")
+									$(".p2").css({color:"red"})
+								}else{
+									
+									if(data.indexOf("1")>-1){
+										$(".p2").html("密码正确");
+										$(".p2").css({color:"green"})
+										
+									}else{
+										$(".p2").html("密码错误");
+										$(".p2").css({color:"red"})
+										
+							}
+						}
+						
+					});
+							}else{
+								$(".p1").html("亲，该用户名不存在");
+								$(".p1").css({color:"red"})
+								$("#upwd").attr("disabled",true)
+						}
+						}
+						
+					})
+
+				
+				
+				});
+		})
+
+			
+			

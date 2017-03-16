@@ -12,7 +12,7 @@
 			var p6=document.getElementsByClassName("p6")[0];
 			var p8=document.getElementsByClassName("p8")[0];
 			var p9=document.getElementsByClassName("p9")[0];
-			console.log(p6);
+			
 			var p7=document.getElementsByClassName("p7")[0];
 			var pwd=getId("pwd");
 			var pwd1=getId("pwd1");
@@ -87,3 +87,49 @@
 				pwd1.value="";
 			}
 			}
+//			//复选框
+//			$(function(){
+//			//var check=getId("check");
+//			var IsCheck=$("#check").attr("checked");
+//			//var zhuce=getId("zhuce");
+//			if(IsCheck==true){
+//				console.log(check.checked);
+//				 $("#zhuce").attr("disabled",false);
+//				//zhuce.disabled=true;
+//				$("#zhuce").css({"background":"#b71a21"})
+//				//zhuce.style.background="#b71a21";
+//			}else{
+//				//zhuce.disabled=true;
+//				$("#zhuce").attr("disabled",true);
+//			}
+//	})
+		//注册会员
+		$(function(){
+			$("#zhuce").click(function(){
+				//1、
+				
+				$.post("demo03.php",
+						{
+							"userName":$("#tel").val(),
+							"userPass":$("#pwd").val()
+						},
+						function(data){
+							//alert(data);
+							alert("注册成功！");			
+						}
+				)
+			});
+			$("#tel").blur(function(){
+					$.get("checkUser.php",{"user":$("#tel").val()},function(data){
+						console.log(data);
+						if(data.indexOf("1")>-1){
+							$(".p6").html("亲，该用户名已经存在,请更换手机号");
+							$(".p6").css({color:"red"});
+							$("#zhuce").attr("disabled",true)
+						}else{
+							$(".p6").html("亲，该用户名可用");
+							$("#zhuce").attr("disabled",false)
+						}
+					});
+				});
+		});

@@ -584,7 +584,7 @@ a{
     top:400px;
     left:0px;
     font-weight:bold;
-    background:grey;
+   background:#b71a21;
     border:none;
     color:#fff;
 }
@@ -623,7 +623,7 @@ a{
     border-bottom: 1px solid #b71a21;
 }
 .Copyright{
-   
+    margin-top: 30px;
     margin-left:200px;
     font-size:13px;
     color:gray;
@@ -709,10 +709,13 @@ a{
     top:-10px;
 }
 .p1{
-    position:absolute;top:35px;
+    position:absolute;
+    top:35px;
     left:35px;
+    width:400px;
 }
 .p2{
+    width:400px;
     position: absolute;
     top:110px;
     left:35px;
@@ -877,6 +880,7 @@ a{
     margin-top:40px;
      border-bottom:1px solid gray;
       border-top:1px solid gray;
+     
 }
 #sublist{
    
@@ -899,4 +903,361 @@ a{
 }
 #sublist li a{
     color:gray;
+}
+#subcontent{
+    width:1200px;
+    height:1480px;
+    margin-left:40px;
+    margin-top:60px;
+}
+.subtab{
+    width:1200px;
+    height:708pxx;  
+}
+.subtab li{
+    width:380px;
+    height:708px;
+    float:left;
+}
+.subtab li:nth-child(2){
+    margin:0 30px;
+}
+#sub_con{
+    width:1200px;
+    height:5000px;
+    margin-left:40px;
+}
+.xf,.jk,.cqk,.pfy{
+    width:1200px;
+    height:680px;
+   display:flex;
+   flex-flow: row wrap;
+}
+.xf dl,.jk dl,.cqk dl,.pfy dl{
+    margin:18px;
+    width:260px;
+    height:312px;
+}
+.xf dt,.jk dt,.cqk dt,.pfy dt{
+    position: relative;
+    width:260px;
+    height:260px;
+    margin-bottom: 10px;
+}
+.xf dt span,.jk dt span,.cqk dt span,.pfy dt span{
+    display: block;
+    width:60px;
+    height:60px;
+    position:absolute;
+    right:0;
+    bottom:0px;
+    border-radius: 50%;
+    background:#b71a21;
+    color:#fff;
+    line-height: 25px;
+    text-align: center;
+    font-weight:bold;
+    padding: 5px;
+}
+.xf dd,.jk dd,.cqk dd,.pfy dd{
+    width:260px;
+    height:50px;
+}
+.xf dd a,.jk dd a,.cqk dd a,.pfy dd a{
+    display: block;
+    width:260px;
+    text-align: center;
+    color:gray;
+    font-size:14px;
+    font-weight:bold;
+}
+.xf dd span,.jk dd span,.cqk dd span,.pfy dd span{
+    display: block;
+    width:260px;
+    text-align: center;
+    color:#b71a21;
+    text-decoration: line-through;
+}
+.sub_jk,.sub_yrf,.sub_pfy{
+    margin-top:60px;
+}
+.return_first{
+    margin-left:40px;
+}
+#subreturnTop{
+    position:fixed;
+    right:0px;
+    bottom:40px;
+}
+
+.xf img:hover,.jk img:hover,.cqk img:hover,.pfy img:hover{
+   transform: translateY(-2px);
+    box-shadow: 0 0 5px grey;
+    transition: all 1s;
+}
+
+.subtab img:hover{
+   //height:710px;
+    transform: translateY(-2px);
+    box-shadow: 0 0 5px grey;
+    transition: all 1s;
+}
+
+.dt1 img:hover,.dt2 img:hover,.dt3 img:hover,.dt4 img:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 0 5px grey;
+    transition: all 1s;
+}
+
+.dt5 img:hover,.dt6 img:hover,.dt7 img:hover,.dt8 img:hover{
+   transform: translateY(-2px);
+    box-shadow: 0 0 5px grey;
+    transition: all 1s;
+}
+.return_first img:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 0 5px grey;
+    transition: all 1s;
+}
+#defrom{
+    margin-left:30px;
+
+}
+.follow{
+    margin-top:20px;
+    font-size:14px;
+    color:black;
+    font-size:14px;
+   
+}
+.follow a{
+    color:black;
+    font-size:14px;
+    margin:10px;
+}
+#dename{
+    width:1200px;
+    height:20px;
+    margin-top:30px;
+    border-bottom: 1px solid gray;
+    padding-bottom:20px;
+    margin-left:40px;
+}
+.desp1,.desp2,.delist{
+    float:left;
+}
+.desp1{
+    font-weight: bold;
+    font-size: 20px;
+}
+.desp2{
+    color:#b71a21;
+    font-size:14px;
+    margin-top:5px;
+    margin-left:18px;
+}
+.delist{
+    margin-left:120px;
+}
+.delist li{
+    float:left;
+    border-right:1px solid gray;
+    padding:0px 25px;
+    font-weight: bold;
+   
+    
+}
+.delist li a{
+   color:black;  
+}
+.delist li:last-child{
+    border:none;
+}
+        #degood{
+                float:left;
+                width:400px;
+                height:400px;
+                position:relative;
+                margin-left:100px;
+                border:1px solid gray;
+            }
+            #degood img{
+                width:400px;
+                height:400px;
+            }
+            #depop{
+                width:200px;
+                height:200px;
+                background:gray;
+                position:absolute;
+                left:0;
+                top:0;
+                display:none;
+                opacity: 0.5;
+            }
+            #debig{
+                position:absolute;
+                left:550px;
+            
+                width:400px;
+                height:400px;
+                
+                overflow: hidden;
+                display:none;
+            }
+            #debig img{
+                    position:absolute;
+                    left:0;
+                    top:0;
+                    z-index: 100;
+                                
+            }
+            #dewrap{
+                width:1200px;
+                margin-left:40px;
+                height:500px;
+                margin-top:50px;
+            }
+#deprice{
+    position: absolute;
+    left:630px;
+}
+em{
+    font-style:normal;
+}
+#deprice .sale{
+    font-size:12px;
+    
+}
+.sale em{
+    text-decoration: line-through;
+}
+#deprice .youhui{
+    font-size:14px;
+    color:#b71a21;
+    margin-left:30px;
+}
+.youhui em{
+    font-size:28px;
+    font-weight:bold;
+}
+.recharge{
+    margin-left:30px;
+}
+.recharge a{
+    font-size:12px;
+    color:#b71a21;
+}
+.decolor{
+    color:gray;
+    margin-top:20px;
+    font-size:14px;
+}
+.size{
+    margin-top:20px;
+    color:gray;
+    font-size:14px;
+}
+.size span{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    border:1px solid gray;
+    margin-left:5px;
+    text-align: center;
+    line-height:20px;
+}
+.number{
+    margin-top:20px;
+    font-size:14px;
+    color:gray;
+}
+.addcar{
+    margin-top:20px;
+  
+}
+.addcar a{
+    display:inline-block;
+    width:250px;
+    height:50px;
+    text-align: center;
+    line-height:50px;
+    background:#b71a21;
+    margin-right:50px;
+    color:#fff;
+    font-weight:bold;
+}
+//购物车
+#spcar{
+    width:1000px;
+    height:40px;
+    margin-top:20px;
+    margin-left:180px;
+    margin-right:150px;
+}
+#spcar img{
+    width:140px;
+    height:35px;
+    float:left;
+}
+#spcar ul{
+    margin-top:15px;
+    float:left;
+    margin-left:545px;
+}
+#spcar ul li {
+    float:left;
+    padding-left: 10px;
+    padding-right: 10px;
+    color:gray;
+    font-size:12px;
+}
+#spcar ul a{
+    color:#b71a21;
+}
+#spcar ul li:nth-child(2){
+    border-right:1px solid gray;
+}
+.spline{
+    width:1000px;
+    height:1px;
+    border-bottom:1px solid gray;
+    margin-left:120px;
+}
+#spstep{
+    margin-left:120px;
+}
+#spstep li{
+    margin-top:10px;
+    float:left;
+    width:150px;
+    height:25px;
+    color:#fff;
+    text-align: center;
+    line-height: 25px;
+    font-size:14px;
+    background:grey;
+}
+
+.mycar{
+    width:150px;
+    height:30px;
+    background: url("../image/2017-03-13_145430.png") no-repeat 0 center;
+    margin-top:50px;
+    margin-bottom: 10px;
+    margin-left:150px;
+}
+.mycar span{
+   
+    padding-left: 40px;
+    font-size:20px;
+    font-weight:bold;
+}
+#cartTable{
+    margin-left:120px;
+    margin-top:15px;
+}
+.first_tr{
+    background:grey;
+   // display:none;
 }

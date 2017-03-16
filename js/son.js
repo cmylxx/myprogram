@@ -86,8 +86,8 @@
 			
 			
 			//返回顶部
-			
-			returnTop.onclick=function(){
+			var subreturnTop=getId("subreturnTop");
+			subreturnTop.onclick=function(){
 				var scroll=document.body.scrollTop||document.documentElement.scrollTop;
 				scroll=0;
 				document.body.scrollTop=scroll;
@@ -106,3 +106,54 @@
 						}
 				}
 			
+			//楼层索引
+			$(window).scroll(function () {
+		       if($(window).scrollTop()>=700){		       		
+		       		$("#subnav:eq(0)").css({position:"fixed",top:-40,left:-17,"z-index":9999});
+		       }else{
+		       		$("#subnav:eq(0)").css({position:"relative",top:0,left:0});
+		       }
+			});
+			
+			var Li=getId("sublist").getElementsByTagName("li");
+			var oDiv=getId("sub_con").getElementsByTagName("div");
+			
+			window.onload = window.onscroll = function(){
+				var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+				for (var i = 0; i < Li.length; i++) {
+					Li[i].onclick = function(){
+						
+						for (var j = 0; j < Li.length; j++) {
+							if (this == Li[j]) {
+								console.log(this)
+								document.documentElement.scrollTop = oDiv[j].offsetTop;
+								document.body.scrollTop = oDiv[j].offsetTop;
+							}
+						}
+					}
+				}
+			}
+			//获取页面元素
+			
+			
+				$(function(){
+					$.get("getGoodsList.php",
+					function(data){
+						
+						let odata=eval(data);
+					//	console.log(data);
+						for(let i=0;i<odata.length;i++){
+							console.log(odata[i]);
+							var htmlStr="<dl>";
+								htmlStr+="<dt><img src='"+odata[i].goodsImg+"'><span>特惠<br>￥"+odata[i].goodsPrice+"</span></dt><dd><a href='###'>凡客西服  男款 黑色</a><br><span>售价599</span></dd>";
+								htmlStr+="</dl>";
+							$(".xf").append(htmlStr);	
+						}
+					}
+				)
+			})
+				
+			
+			
+			
+	
